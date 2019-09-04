@@ -1,0 +1,150 @@
+<!Doctype html>
+<html lang = en>
+<meta charset utf-8>
+<head> 
+<style>
+body {
+font-family: "Times New Roman", Times, serif;
+background-color: #87CEFA;
+}
+h1 {
+font-size: 40px;
+color: #FF4500;
+}
+h3 {
+font-size: 20px;
+color: #FF4500;
+}
+p {
+font-size: 17px;
+text-align: justify;
+}
+h4 {
+font-size: 15px;
+}
+table{
+border-collapse: separate;
+border-spacing:5px 10px;
+}
+ul.circle {
+list-style-type:circle;
+}
+img{
+border: 1px
+border-radius:1px solid #ddd;
+padding:10px;
+width:150px;
+}
+
+</style>
+<script>
+function validation(){
+var name= document .getElementById("name").value;
+var email= document .getElementById("email").value;
+var title= document .getElementById("title").value;
+var message= document .getElementById("message").value;
+error_message.style.padding = "10px";
+if {name.length <5){
+text = "Please Enter Valid Name";
+error_message.innerHTML = text;
+return false;
+}
+if {email.indexof("@")==-1 || email.length <6){
+text = "Please Enter Valid email";
+error_message.innerHTML = text;
+return false;
+}
+if {title.length <10){
+text = "Please Enter correct title";
+error_message.innerHTML = text;
+return false;
+}
+if {message.length <20){
+text = "Please Enter more than 20 characters";
+error_message.innerHTML = text;
+return false;
+}
+</script>
+</head>
+<header>
+<center>
+<h1> OKPALA FAITH EBELE </h1>
+<h4> E-mail: okpalafaith1@gmail.com	       Mobile: 0811 397 3857 </h4>
+</center>
+<body>
+ <h3> OBJECTIVE </h3>
+<p>To develop and excel in a stimulating and well structured environment that values diversity <br> and rewards teamwork, continuous learning and career development.</p>
+<img src="https://res.cloudinary.com/dhtxiw89g/image/upload/v1566647586/IMG_20180606_083511.jpg" alt="" width="200" height="100"> 
+
+<h3> EMPLOYMENT </h3>
+<strong><p> Union Bank of Nigeria </p></strong>
+<p>Direct Sales Executive (January 2018 till date) </p>
+<ul class="circle">
+<li> Established and maintained relationship with customers</li>
+<li> Acquired new customers, cross sold and up sold banks products </li>
+<li> Maintained relationship between existing customers </li>
+<li> Cross sold and up sold banks products </li>
+<li> Scheduled appointments with decision makers to review the products, and increase sale </li>
+</ul>
+<strong><h3>EDUCATION</h3></strong>
+<p>Obafemi Awolowo University Ile-Ife, Osun, Nigeria 2015</p>
+<ul class="circle">
+<li>B.sc Microbiology (Second class upper division) </li>
+<li>Final year project was on the characterization, antibiotics sensitivity pattern <br>and extended spectrum betalactamase of bacteria isolated from chicken droppings. </li>
+</ul>
+<h3> SKILLS</h3>
+<table border="1">
+<tr>
+<th>skills</th>
+<th>proficiency</th>
+<tr>
+<td>Creative and analytical thinking</td>
+<td>Expert</td>
+</tr>
+<tr>
+<td>Sales And Promotions</td>
+<td>Expert</td>
+</tr>
+<tr>
+<td>Client Relations Development</td/tr>
+<td>Expert</td>
+</tr>
+<tr>
+<td>Risk, Hazard and safety management and training implementation </td>
+<td>Intermediate</td>
+</tr>
+<tr>
+<td>HTML</td>
+<td>Beginner</td>
+</tr>
+<tr>
+<td> CSS</td>
+<td>Expert</td>
+</tr>
+</tr>
+</table>
+<div class="wrapper">
+<h2> Contact us </h2>
+<div id="error_message"></div>
+
+<form id="myform">
+<div class="input_field">
+<input type="text" placeholder="Name" id="name"
+</div>
+<div class="input_field">
+<input type="text" placeholder="Email" id="email"
+</div>
+<div class="input_field">
+<input type="text" placeholder="Title" id="title"
+</div>
+<div class="input_field">
+<textarea id="message" placeholder="Message" > </textarea>
+</div>
+<div class="btn">
+<input type="submit">
+</div>
+</form>
+
+
+</body>
+</html>
