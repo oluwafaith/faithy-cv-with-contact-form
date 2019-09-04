@@ -35,39 +35,57 @@ border-radius:1px solid #ddd;
 padding:10px;
 width:150px;
 }
+.wrapper{
 
+max-width: 350px;
+background: #fff;
+width: 100%;
+padding:25px;
+border-radius:5pd;
+box-shadow: 4px 4px 2px rgba(254,236,164,1);
+}
+.wrapper h2{
+text-align: center;
+margin-bottom:20px;
+text-transform:  uppercase;
+letter-spacing: 3px;
+color: #332902;
+}
+.wrapper .input_field{
+margin-bottom: 10px;
+}
+.wrapper .input_field input[type="text"].
+.wrapper textarea{
+width:100%;
+border: 1px solid #e0e0e0;
+padding:10px;
+}
+.wrapper textarea{
+height: 80px;
+resize: none;
+}
+.wrapper .btn input[type="submit"]{
+border: 0;
+margin-top: 15px;
+padding: 10px;
+width: 100%;
+background: #fece0c;
+color: #332902;
+text-transform: uppercase;
+letter-spacing: 5px;
+font-weight: bold;
+border-radius: 25px:
+cursor: pointer:
+}
+.wrapper #error_message{
+margin-bottom: 20px;
+padding: 10px;
+background: #fe8b8e;
+text-align: center;
+font-size: 14px;
+transition: all 0.5s ease;
+}
 </style>
-<script>
-function validation(){
-var name= document .getElementById("name").value;
-var email= document .getElementById("email").value;
-var title= document .getElementById("title").value;
-var message= document .getElementById("message").value;
-error_message.style.padding = "10px";
-if {name.length <5){
-text = "Please Enter Valid Name";
-error_message.innerHTML = text;
-return false;
-}
-if {email.indexof("@")==-1 || email.length <6){
-text = "Please Enter Valid email";
-error_message.innerHTML = text;
-return false;
-}
-if {title.length <10){
-text = "Please Enter correct title";
-error_message.innerHTML = text;
-return false;
-}
-if {message.length <20){
-text = "Please Enter more than 20 characters";
-error_message.innerHTML = text;
-return false;
-}
-alert(" form submitted successfully!")
-return true;
-}
-</script>
 </head>
 <header>
 <center>
@@ -122,15 +140,15 @@ return true;
 </tr>
 <tr>
 <td> CSS</td>
-<td>Expert</td>
+<td>Beginner</td>
 </tr>
 </tr>
 </table>
 <div class="wrapper">
-<h2> Contact us </h2>
-<div id="error_message"></div>
-
-<form id="myform">
+<h2> Contact form </h2>
+<div id="error_message">
+</div>
+<form id="myform" onsubmit="return validation()">
 <div class="input_field">
 <input type="text" placeholder="Name" id="name"
 </div>
@@ -147,7 +165,41 @@ return true;
 <input type="submit">
 </div>
 </form>
+<script>
+function validation(){
+var name= document .getElementById("name").value;
+var email= document .getElementById("email").value;
+var title= document .getElementById("title").value;
+var message= document .getElementById("message").value;
+var error_message = document.getElementById("error_message");
+
+var text;
+error_message.style.padding = "10px";
+if (name.length <5){
+text = "Please Enter Valid Name";
+error_message.innerHTML = text;
+return false;
+}
+if (email.indexof("@")==-1 || email.length <6){
+text = "Please Enter Valid email";
+error_message.innerHTML = text;
+return false;
+}
+if (title.length <10){
+text = "Please Enter correct title";
+error_message.innerHTML = text;
+return false;
+}
+if (message.length <20){
+text = "Please Enter more than 20 characters";
+error_message.innerHTML = text;
+return false;
+}
+</script>
 
 
 </body>
 </html>
+
+
+ 
