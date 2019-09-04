@@ -69,7 +69,6 @@ border: 0;
 margin-top: 15px;
 padding: 10px;
 width: 100%;
-background: #fece0c;
 color: #332902;
 text-transform: uppercase;
 letter-spacing: 5px;
@@ -80,7 +79,6 @@ cursor: pointer:
 .wrapper #error_message{
 margin-bottom: 20px;
 padding: 10px;
-background: #fe8b8e;
 text-align: center;
 font-size: 14px;
 transition: all 0.5s ease;
@@ -150,56 +148,66 @@ transition: all 0.5s ease;
 </div>
 <form id="myform" onsubmit="return validation()">
 <div class="input_field">
-<input type="text" placeholder="Name" id="name"
+<input type="text" placeholder="Name" id="name" required>
 </div>
+<br/>
 <div class="input_field">
-<input type="text" placeholder="Email" id="email"
+<input type="text" placeholder="Email" id="email" required>
 </div>
+<br/>
 <div class="input_field">
-<input type="text" placeholder="Title" id="title"
+<input type="text" placeholder="Title" id="title" >
 </div>
+<br/>
 <div class="input_field">
 <textarea id="message" placeholder="Message" > </textarea>
 </div>
+<br/>
 <div class="btn">
 <input type="submit">
 </div>
 </form>
 <script>
 function validation(){
-var name= document .getElementById("name").value;
-var email= document .getElementById("email").value;
-var title= document .getElementById("title").value;
-var message= document .getElementById("message").value;
+var name= document.getElementById("name").value;
+var email= document.getElementById("email").value;
+var title= document.getElementById("title").value;
+var message= document.getElementById("message").value;
 var error_message = document.getElementById("error_message");
 
 var text;
 error_message.style.padding = "10px";
-if (name.length <5){
+if(name.length <4){
 text = "Please Enter Valid Name";
 error_message.innerHTML = text;
 return false;
 }
-if (email.indexof("@")==-1 || email.length <6){
+if(email.indexof("@")==-1 || email.length <6){
 text = "Please Enter Valid email";
 error_message.innerHTML = text;
 return false;
 }
-if (title.length <10){
+if(title.length <5){
 text = "Please Enter correct title";
 error_message.innerHTML = text;
 return false;
 }
-if (message.length <20){
+if(message.length <20){
 text = "Please Enter more than 20 characters";
 error_message.innerHTML = text;
 return false;
 }
+alert("Form submitted successfully!)
+return true;
+} 
 </script>
 
 
 </body>
 </html>
+
+
+ 
 
 
  
