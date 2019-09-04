@@ -64,6 +64,9 @@ text = "Please Enter more than 20 characters";
 error_message.innerHTML = text;
 return false;
 }
+alert(" form submitted successfully!")
+return true;
+}
 </script>
 </head>
 <header>
